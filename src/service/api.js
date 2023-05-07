@@ -30,7 +30,7 @@ export const getUser=async (data)=>{
 }
 export const editUser=async (data,id)=>{
   try {
-    return await axios.put(data,`${API_URL}/${id}`)
+    return await axios.put(`${API_URL}/${id}`,data)
   }
   catch(error) {
     console.log('error while calling getuser api',error.message)
